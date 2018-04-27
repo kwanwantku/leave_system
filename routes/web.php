@@ -19,5 +19,6 @@ Route::get('/', function () {
 //     echo "this is home";
 // });
 
+Route::get('/home/{id}', 'Controller@home');
 Route::get('/home/{id}', 'Controller@home')->name('homeid');
 Route::any('/', 'HomeController@index');
