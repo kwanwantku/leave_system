@@ -1,14 +1,8 @@
 @extends('main_layout')
 
-@if ($isAdmin)
-    @section('content')
-        hello world admin
-    @stop
-@else
-    @section('content')
-        hello world normal
-    @stop
-@endif
+@section('content')
+        kittypoom
+@stop
 
 @section('sidebar')
     <ul>

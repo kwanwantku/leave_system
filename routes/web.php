@@ -21,4 +21,7 @@ Route::get('/', function () {
 
 Route::get('/home/{id}', 'Controller@home');
 Route::get('/home/{id}', 'Controller@home')->name('homeid');
-Route::any('/', 'HomeController@index');
+Route::any('/old', 'HomeController@index');
+
+Route::get('/', 'HomeController@myHome');
+Route::get('/users', 'HomeController@myUsers');

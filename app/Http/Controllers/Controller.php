@@ -20,14 +20,14 @@ class Controller extends BaseController
         //print_r($users);
 
 //        $users = Users::all();
-        $user = Users::where('id', 1)->first();
+        $user = Users::where('id', 2)->get();
         print_r($user);
         echo '<hr/>';
-        echo $user->picture;
-        $user->picture = '/src/img.jpg';
-        $user->save();
-        echo '<hr/>';
-        echo $user->picture;
+        // echo $user->picture;
+        // $user->picture = '/src/img.jpg';
+        // $user->save();
+        // echo '<hr/>';
+        // echo $user->picture;
 
 
 //        $newUser = new Users();
@@ -43,15 +43,15 @@ class Controller extends BaseController
 
         //$u1 = Users::insertNewUser('a', 'b');
 
-        echo $user->contact->ig;
-        $user->contact->lineid = 'newid';
-        $user->contact->save();
+        // echo $user->contact->ig;
+        // $user->contact->lineid = 'newid';
+        // $user->contact->save();
 
         //Users::where('id', 2)->first()->forceDelete();
 
         return view('page1', [
-            'isAdmin' => $user->isAdmin(),
-            'menus' => ['a', 'b']
+            // 'isAdmin' => $user->isAdmin(),
+            'menus' => ['Login', 'Add Leave Request',]
         ]);
     }
 }
