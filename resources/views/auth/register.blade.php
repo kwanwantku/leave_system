@@ -58,9 +58,9 @@
                             <label for="type" class="col-md-4 control-label">Type</label>
                             <div class="col-md-6">
                                 <select name="type">
-                                <option value="0">Type 0</option>
-                                <option value="1">Type 1</option>
-                                <option value="2">Type 2</option>
+                                <option value="0">Administrator</option>
+                                <option value="1">Supervisor</option>
+                                <option value="2">Subordinate</option>
                                 </select>
                             </div>
                         </div>
