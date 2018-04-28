@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace PranGerLeaveRequester\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

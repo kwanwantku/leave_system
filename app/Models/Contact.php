@@ -6,7 +6,7 @@
  * Time: 11:41
  */
 
-namespace App\Models;
+namespace PranGerLeaveRequester\Models;
 
 
 use Illuminate\Database\Eloquent\Model;

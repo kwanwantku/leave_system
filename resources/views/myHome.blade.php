@@ -7,7 +7,7 @@
 
     <div class="col-lg-12">
 
-        <h1 class="page-header">Dashboard</h1>
+        <h1 class="page-header">Blitzboard</h1>
 
     </div>
 
@@ -79,7 +79,7 @@
 
                     <div class="col-xs-9 text-right">
 
-                        <div class="huge">12</div>
+                        <div class="huge">12 tails</div>
 
                         <div>New Tasks!</div>
 
@@ -123,7 +123,7 @@
 
                     <div class="col-xs-9 text-right">
 
-                        <div class="huge">124</div>
+                        <div class="huge">8888888</div>
 
                         <div>New Orders!</div>
 
@@ -167,9 +167,9 @@
 
                     <div class="col-xs-9 text-right">
 
-                        <div class="huge">13</div>
+                        <div class="huge">99</div>
 
-                        <div>Support Tickets!</div>
+                        <div>Support E Tickets!</div>
 
                     </div>
 

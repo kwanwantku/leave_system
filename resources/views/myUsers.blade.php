@@ -17,7 +17,7 @@
 
 <!-- /.row -->
 
-
+<?php $users = DB::table('users')->get() ?>
 <table class="table table-striped table-bordered table-hover">
 
     <thead>
@@ -32,47 +32,28 @@
 
             <th>Username</th>
 
+            <th>Type</th>
+
         </tr>
 
     </thead>
-
     <tbody>
-
+    @foreach($users as $user)
         <tr>
 
-            <td>1</td>
+            <td>{{$user->id}}</td>
 
-            <td>Hardik</td>
+            <td>{{$user->firstname}}</td>
 
-            <td>Savani</td>
+            <td>{{$user->lastname}}</td>
 
-            <td>@mdo</td>
+            <td>{{$user->email}}</td>
+
+            <td>{{$user->type}}</td>
 
         </tr>
 
-        <tr>
-
-            <td>2</td>
-
-            <td>Kashiyani</td>
-
-            <td>Vimal</td>
-
-            <td>@fat</td>
-
-        </tr>
-
-        <tr>
-
-            <td>3</td>
-
-            <td>Harshad</td>
-
-            <td>Pathak</td>
-
-            <td>@twitter</td>
-
-        </tr>
+    @endforeach
 
     </tbody>
 

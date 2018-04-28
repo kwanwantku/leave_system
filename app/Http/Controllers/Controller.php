@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace PranGerLeaveRequester\Http\Controllers;
 
-use App\Models\Users;
+use PranGerLeaveRequester\Models\Users;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;

@@ -22,13 +22,14 @@ Route::get('/', function () {
 Route::get('/home/{id}', 'Controller@home');
 Route::get('/home/{id}', 'Controller@home')->name('homeid');
 Route::any('/old', 'HomeController@index');
+Auth::routes();
 
 Route::get('/', 'HomeController@myHome');
 
 Route::get('/users', 'HomeController@myUsers');
 
-Auth::routes();
 /*
+
 No difference
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
    $this->post('login', 'Auth\LoginController@login');
@@ -42,5 +43,6 @@ $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
    $this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
    $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
    $this->post('password/reset', 'Auth\ResetPasswordController@reset');
-*/
+
 Route::get('/home', 'HomeController@index')->name('home');
+*/

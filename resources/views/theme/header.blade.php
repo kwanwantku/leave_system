@@ -12,7 +12,7 @@
 
     </button>
 
-    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+    <a class="navbar-brand" href="{{ url('/') }}">PranGer's Leave Request System</a>
 
 </div>
 
@@ -59,7 +59,7 @@
 
                 <a class="text-center" href="#">
 
-                    <strong>Read All Messages</strong>
+                    <strong>Read All Gay Fics</strong>
 
                     <i class="fa fa-angle-right"></i>
 
@@ -93,7 +93,7 @@
 
                         <p>
 
-                            <strong>Task 4</strong>
+                            <strong>Task 555</strong>
 
                             <span class="pull-right text-muted">20% Cooler</span>
 
@@ -153,9 +153,9 @@
 
                     <div>
 
-                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                        <i class="fa fa-upload fa-fw"></i> Server filled with 10^3 Waifus
 
-                        <span class="pull-right text-muted small">4 minutes ago</span>
+                        <span class="pull-right text-muted small">0.000000000000001 nanoseconds ago</span>
 
                     </div>
 
@@ -195,7 +195,7 @@
 
         <ul class="dropdown-menu dropdown-user">
 
-            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            <li><a href="GETOUTTAMAHSHED"><i class="fa fa-user fa-fw"></i> User Profile</a>
 
             </li>
 
@@ -205,7 +205,7 @@
 
             <li class="divider"></li>
 
-            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            <li><a href="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 
             </li>
 

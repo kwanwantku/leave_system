@@ -1,28 +1,80 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace PranGerLeaveRequester\Http\Controllers;
+
+
 
 use Illuminate\Http\Request;
 
+use PranGerLeaveRequester\Item;
+
+
+
 class HomeController extends Controller
+
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
-     * Show the application dashboard.
+
+     * Create a new controller instance.
+
      *
-     * @return \Illuminate\Http\Response
+
+     * @return void
+
      */
+
+    public function __construct()
+
+    {
+        //REDIRECT TO LOGIN PAGE IF NOT LOGGED IN
+        //$this->middleware('auth');
+
+    }
+
+
+
+    /**
+
+     * Show the application dashboard.
+
+     *
+
+     * @return \Illuminate\Http\Response
+
+     */
+
+    public function myHome()
+
+    {
+
+        return view('myHome');
+
+    }
+
+
+
+    /**
+
+     * Show the my users page.
+
+     *
+
+     * @return \Illuminate\Http\Response
+
+     */
+
+    public function myUsers()
+
+    {
+
+        return view('myUsers');
+
+    }
+
     public function index()
     {
         return view('home');
     }
+
 }

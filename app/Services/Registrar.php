@@ -1,6 +1,6 @@
-<?php namespace App\Services;
+<?php namespace PranGerLeaveRequester\Services;
 
-use App\User;
+use PranGerLeaveRequester\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
