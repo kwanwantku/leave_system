@@ -76,3 +76,5 @@ Route::get('/documentation', function()
 {
 	return View::make('documentation');
 });
+
+Route::post('/login', ['uses' => 'LoginController@onPost', 'as' => 'frontend.guest.login']);

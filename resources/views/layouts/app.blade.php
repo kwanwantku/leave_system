@@ -28,6 +28,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     PranGer's Leave Request System
                 </a>
+                <?php $users = DB::table('users')->get() ?>
                 <!--
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'PranGer Leave Request System') }}
