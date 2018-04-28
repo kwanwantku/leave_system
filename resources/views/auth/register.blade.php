@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
-                        <div class="form-group{{ $errors->has('fristname') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
                             <label for="firstname" class="col-md-4 control-label">First Name</label>
                             <div class="col-md-6">
                                 <input id="firstname" type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" required autofocus>
@@ -57,10 +57,10 @@
                         <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
                             <label for="type" class="col-md-4 control-label">Type</label>
                             <div class="col-md-6">
-                                <select name="type">
-                                <option value="0">Administrator</option>
-                                <option value="1">Supervisor</option>
-                                <option value="2">Subordinate</option>
+                                <select class="form-control" name="type">
+                                <option value="Administrator">Administrator</option>
+                                <option value="Supervisor">Supervisor</option>
+                                <option value="Subordinate">Subordinate</option>
                                 </select>
                             </div>
                         </div>
@@ -91,15 +91,18 @@
                         </div>
                         
                         <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }}">
+
+                            <?php $items = DB::table('departments')->get() ?>
                             <label for="department" class="col-md-4 control-label">Department</label>
+                            
                             <div class="col-md-6">
-                                <select name="department">
-                                <option value="0">Type 0</option>
-                                <option value="1">Type 1</option>
-                                <option value="2">Please loop this thing!!</option>
-                                </select>
+                                <select class="form-control" name="department">
+                                    @foreach($items as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                            </select>
                             </div>
-                        </div>
+                        <br>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

@@ -37,17 +37,17 @@
 
                     <div>
 
-                        <strong>John Smith</strong>
+                        <strong>Kitty Poom</strong>
 
                         <span class="pull-right text-muted">
 
-                            <em>Yesterday</em>
+                            <em>65 x 10^6 years ago</em>
 
                         </span>
 
                     </div>
 
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                    <div>Yaranaika?</div>
 
                 </a>
 
@@ -95,15 +95,15 @@
 
                             <strong>Task 4</strong>
 
-                            <span class="pull-right text-muted">80% Complete</span>
+                            <span class="pull-right text-muted">20% Cooler</span>
 
                         </p>
 
                         <div class="progress progress-striped active">
 
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
 
-                                <span class="sr-only">80% Complete (danger)</span>
+                                <span class="sr-only">20% Cooler (Awesome!)</span>
 
                             </div>
 
@@ -121,7 +121,7 @@
 
                 <a class="text-center" href="#">
 
-                    <strong>See All Tasks</strong>
+                    <strong>See All Swags</strong>
 
                     <i class="fa fa-angle-right"></i>
 
@@ -169,7 +169,7 @@
 
                 <a class="text-center" href="#">
 
-                    <strong>See All Alerts</strong>
+                    <strong>See All Waifus</strong>
 
                     <i class="fa fa-angle-right"></i>
 

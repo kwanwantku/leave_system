@@ -29,6 +29,16 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/home';
 
+    
+
+    protected function showDeps(){
+
+    $deps = DB::table('departments')->get();
+
+    return view('auth.register', ['deps' => $deps]);
+
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -48,10 +58,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'firstname' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
             'username' => 'required|string|max:20|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'type' => 'required|string',
+            'password' => 'required|string|min:8|confirmed',
+            'picture' => 'string',
+            'department' => 'required|int',
         ]);
     }
 
@@ -64,10 +78,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
             'username' => $data['username'],
             'email' => $data['email'],
+            'type' => $data['type'],
             'password' => bcrypt($data['password']),
+            'picture' => $data['picture'],
+            'department' => $data['department'],
         ]);
     }
 }
