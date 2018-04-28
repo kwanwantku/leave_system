@@ -22,3 +22,5 @@ Route::get('/', function () {
 Route::get('/home/{id}', 'Controller@home');
 Route::get('/home/{id}', 'Controller@home')->name('homeid');
 Route::any('/', 'HomeController@index');
+Route::get('/login', 'Controller@login_view');
+Route::post('/loginsend', 'Controller@login_check');
