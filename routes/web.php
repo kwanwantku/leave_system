@@ -28,9 +28,15 @@ Route::get('/', 'HomeController@myHome');
 
 Route::get('/users', 'HomeController@myUsers');
 
-/*
+//Route::get('/login', function(){
+//	echo 'login';
+//});
 
-No difference
+//Route::get('/loggingin', function(){
+//	echo 'login';
+//});
+
+
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
    $this->post('login', 'Auth\LoginController@login');
    $this->post('logout', 'Auth\LoginController@logout')->name('logout');
@@ -45,4 +51,3 @@ $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
    $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index')->name('home');
-*/

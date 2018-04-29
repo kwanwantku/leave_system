@@ -5,6 +5,7 @@ namespace PranGerLeaveRequester\Http\Controllers\Auth;
 use PranGerLeaveRequester\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use PranGerLeaveRequester\Models\UserModel;
 
 class LoginController extends Controller
 {
@@ -54,5 +55,20 @@ class LoginController extends Controller
             $field => $request->get($this->username()),
             'password' => $request->password,
         ];
+    }
+
+    public function login(){
+        $email = $_POST['email'];
+        $password =  $_POST['password'];
+
+        echo $email . '<br>' . $password;
+
+        //if email is in database, password correct, go to home page, use UserModel thing
+
+        //echo UserModel.login($email, $password);
+
+        
+        //else go back to login page with alert('Invalid Email or Password')
+
     }
 }

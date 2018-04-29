@@ -1,4 +1,7 @@
 <?php
+
+namespace PranGerLeaveRequester\Models;
+
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class UserModel extends CI_Model
@@ -41,9 +44,9 @@ class UserModel extends CI_Model
     }
   }
 
-  public static function login($username,$password)
+  public static function login($email,$password)
   {
-     $result = static::getCurrentUser()->db->query("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
+     $result = static::getCurrentUser()->db->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
 
     static::logout();
      if($result->num_rows() == 1) {
@@ -55,6 +58,8 @@ class UserModel extends CI_Model
         $_SESSION['user']['password'] = $info->password;
         $_SESSION['user']['email'] = $info->email ;
      }
+
+     return $result;
   }
 
   public static function logout()

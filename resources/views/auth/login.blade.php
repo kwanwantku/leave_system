@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     <!--<form method="POST" action="{{ route('login') }}">-->
-                    <form method="POST" action="/loginApp">
+                    <form method="POST" action="{{route('login')}}">
                         @csrf
 
                         <div class="form-group row">

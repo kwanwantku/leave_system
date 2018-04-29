@@ -88,4 +88,9 @@ class RegisterController extends Controller
             'department' => $data['department'],
         ]);
     }
+
+    protected function register()
+    {
+        echo $_POST['firstname'] . ' ' . $_POST['lastname'] . ' ' . $_POST['username'] . ' ' . $_POST['email'] . ' ' . $_POST['type'] . ' ' . $_POST['username'] . ' ' . $_POST['password'] . ' ' . $_POST['picture'] . ' ' . $_POST['department'];
+    }
 }
