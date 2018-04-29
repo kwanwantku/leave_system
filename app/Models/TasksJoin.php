@@ -37,7 +37,7 @@ class TasksJoin extends Model
 
     public function deletedata($id){
         $table = $this->table;
-        DB::delete("delete from $table where id = ?",[$id]);
+        DB::delete("delete from $table where taskid = ?",[$id]);
     }
 
     public function finddata($id){

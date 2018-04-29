@@ -46,5 +46,17 @@ class Tasks extends Model
         return $datas;
     }
 
+    public function updatedata($data)
+    {
+        $table = $this->table;
+        //
+        $id = $data['id'];
+        $title = $data['title'];
+        $description = $data['description'];
+        $userid = $data['userid'];
+        # code...
+        DB::update("update $table set title = ?, description = ?, userid = ?   where id = ?",[ $title, $description, $userid,  $id]);
+    }
+
 
 }

@@ -47,5 +47,15 @@ class Users extends Model
         $datas = DB::select("select * from $table where username = ? AND password = ?", [$username,$password]);
         return $datas;
     }
+    public function getdata(){
+        $table = $this->table;
+        $datas = DB::select("select * from $table");
+        return $datas;
+    }
+    public function findonedata($id){
+        $table = $this->table;
+        $datas = DB::select("select * from $table where id = ?", [$id]);
+        return $datas;
+    }
 
 }
