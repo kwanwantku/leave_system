@@ -25,7 +25,7 @@
 
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 
-            <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+            ... <i class="fa fa-caret-down"></i>
 
         </a>
 
@@ -79,7 +79,7 @@
 
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 
-            <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+            ... <i class="fa fa-caret-down"></i>
 
         </a>
 
@@ -141,7 +141,7 @@
 
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 
-            <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+            ... <i class="fa fa-caret-down"></i>
 
         </a>
 
@@ -189,25 +189,20 @@
 
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 
-            <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+            Guest <i class="fa fa-caret-down"></i>
 
         </a>
 
         <ul class="dropdown-menu dropdown-user">
 
-            <li><a href="GETOUTTAMAHSHED"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            <li><a href="login"> Login</a>
 
             </li>
 
-            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            <li><a href="register">Register</a>
 
             </li>
 
-            <li class="divider"></li>
-
-            <li><a href="login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-
-            </li>
 
         </ul>
 
