@@ -189,7 +189,17 @@
 
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 
-            Guest <i class="fa fa-caret-down"></i>
+            <?php 
+
+            if(empty($_SESSION['username']))
+            {
+                echo 'Guest';
+            } else {
+
+                echo $_SESSION['username'];
+            }
+
+            ?> <i class="fa fa-caret-down"></i>
 
         </a>
 
