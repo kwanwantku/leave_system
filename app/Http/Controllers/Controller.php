@@ -9,6 +9,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Http\Request;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -53,5 +55,40 @@ class Controller extends BaseController
             'isAdmin' => $user->isAdmin(),
             'menus' => ['a', 'b']
         ]);
+    }
+    function login_view(){
+        return view('login2');
+    }
+    function login_check(Request $request){
+        //return view('login');
+        $this->validate(request(), [
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+        // print_r($request->input('username'));
+        // print_r($request->input('password'));
+        session(['regiskey' => null]);
+        $users = new Users();
+        $data = array('username' => $request->input('username'),
+        'password' => $request->input('password'),
+         );
+        $user = $users->finddata($data);
+        if($user){
+            //auth()->login($user);
+            session(['regiskey' => $user[0]]);
+            echo '<br/>';
+            print_r(session('regiskey'));
+            echo '<br/>';
+            print_r(session('regiskey')->firstname);
+            echo '<br/>';
+            print_r(session('regiskey')->lastname);
+            echo '<br/>';
+            print_r(session('regiskey')->type);
+        }
+        else{
+            print_r("NO");
+        }
+        
+        
     }
 }

@@ -10,6 +10,7 @@ namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class TasksJoin extends Model
 {
@@ -18,4 +19,30 @@ class TasksJoin extends Model
     protected $primaryKeyser = 'userid';
     public $timestamps = false;
 
+    public function getdata(){
+        $table = $this->table;
+        $datas = DB::select("select * from $table");
+        return $datas;
+    }
+
+    public function insertdata($data)
+    {
+        $table = $this->table;
+        //
+        $taskid = $data['taskid'];
+        $userid = $data['userid'];
+        # code...
+        DB::insert("insert into $table (taskid, userid) values (?, ?)", [ $taskid, $userid]);
+    }
+
+    public function deletedata($id){
+        $table = $this->table;
+        DB::delete("delete from $table where taskid = ?",[$id]);
+    }
+
+    public function finddata($id){
+        $table = $this->table;
+        $datas = DB::select("select * from $table where id = ?", [$id]);
+        return $datas;
+    }
 }
