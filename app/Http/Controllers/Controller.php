@@ -45,9 +45,9 @@ class Controller extends BaseController
 
         //$u1 = Users::insertNewUser('a', 'b');
 
-        echo $user->contact->ig;
-        $user->contact->lineid = 'newid';
-        $user->contact->save();
+//        echo $user->contact->ig;
+//        $user->contact->lineid = 'newid';
+//        $user->contact->save();
 
         //Users::where('id', 2)->first()->forceDelete();
 

@@ -31,14 +31,17 @@ class Users extends Model
         $newUser->firstname = '-';
         $newUser->lastname = '-';
         $newUser->picture = '-';
+        $newUser->facebook = '-';
+        $newUser->ig = '-';
+        $newUser->lineid = '-';
         $newUser->departmentid = 1;
         $newUser->save();
         return $newUser;
     }
 
-    public function contact(){
-        return $this->hasOne(Contact::class, 'userid', 'id');
-    }
+//    public function contact(){
+//        return $this->hasOne(Contact::class, 'userid', 'id');
+//    }
     public function finddata($data){
         $table = $this->table;
         $username = $data['username'];
